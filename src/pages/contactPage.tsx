@@ -1,11 +1,23 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
-
+import Header from '../components/header/header';
+import Footer from '../components/footer/footer';
+import { Translation } from 'react-i18next';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Contact = () => {
     return(
         <>
-            <Typography variant="h3" component="h1">İletişim</Typography>
+            <Header />
+            <Container>
+                <Row>
+                <Col>
+                    <Translation> 
+                    {t => <h1>{t('title')} İletişim</h1>} 
+                    </Translation>
+                </Col>
+                </Row>
+            </Container>
+            <Footer />
         </>
     )
 }

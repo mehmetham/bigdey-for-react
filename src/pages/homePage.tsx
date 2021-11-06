@@ -1,32 +1,26 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
-import SimpleCard from '../components/exampleCard';
-import DogCard from '../components/dogCard';
-import Typography from '@material-ui/core/Typography';
-
-const useStyles = makeStyles({
-  root: {
-    textAlign: "center",
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    height: '100vh'
-  },
-});
+import Header from '../components/header/header';
+import Footer from '../components/footer/footer';
+import { Translation } from 'react-i18next';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const HomePage = () => {
-  const classes = useStyles();
-
   return (
     <>
-    <Typography variant="h3" component="h1">Anasayfa</Typography>
-    <Container className={classes.root}>
-        <SimpleCard/>
-        <DogCard/>
-    </Container>
+      <Header />
+      <Container>
+        <Row>
+          <Col>
+            <Translation> 
+              {t => <h1>{t('title')} Anasayfa</h1>} 
+            </Translation>
+          </Col>
+        </Row>
+      </Container>
+      <Footer />
     </>
   );
 }
 
 export default HomePage;
+
