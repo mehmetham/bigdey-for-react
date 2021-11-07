@@ -22,8 +22,10 @@ const rootReducer = combineReducers<IAppState>({
   dogState: dogReducer
 });
 
+const initialState = {};
+
 // Create a configure store function of type `IAppState`
 export default function configureStore(): Store<IAppState, any> {
-  const store = createStore(rootReducer, undefined, applyMiddleware(thunk));
+  const store = createStore(rootReducer, initialState, applyMiddleware(thunk));
   return store;
 }

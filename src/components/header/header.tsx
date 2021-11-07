@@ -32,9 +32,9 @@ const Header = () => {
                             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
-                    <NavDropdown title={i18n.language === 'tr' ? "Turkish" : "English"} id="language-nav-dropdown">
+                    <NavDropdown title={i18n.language === 'en-US' ? "English" : 'Turkish'} id="language-nav-dropdown">
                             <NavDropdown.Item onClick={() => changeLanguageOnClick('tr')}>Turkish</NavDropdown.Item>
-                            <NavDropdown.Item onClick={() => changeLanguageOnClick('en')}>English</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => changeLanguageOnClick('en-US')}>English</NavDropdown.Item>
                         </NavDropdown>
                     </Navbar.Collapse>
                 </Container>
