@@ -28,7 +28,7 @@ export type DogActions = IRandomDogAction | ILoadDogAction | IErrorAction;
 export const RandomDogAction: ActionCreator<ThunkAction<Promise<any>, IDogState, null, IRandomDogAction>> = (dogBreed: string) => {
     return async (dispatch: Dispatch) => {
         try {
-            let result = await (await fetch(`https://dog.ceo/api/breed/${dogBreed}/images/random`)).json();
+            const result = await (await fetch(`https://dog.ceo/api/breed/${dogBreed}/images/random`)).json();
             if (result.status !== 'success')
                 throw new Error(result.message);
             dispatch({image: result.message, type: DogActionTypes.RANDOM_DOG });
@@ -36,7 +36,7 @@ export const RandomDogAction: ActionCreator<ThunkAction<Promise<any>, IDogState,
         console.error(err);
         dispatch({type: DogActionTypes.ERROR, errorMessage: err.message});
         dispatch({type: DogActionTypes.LOAD_DOG, loading: false});
-        };
+        }
     };
 };
 

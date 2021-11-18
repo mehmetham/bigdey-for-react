@@ -4,6 +4,7 @@ import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
 import { Translation } from 'react-i18next';
 import { Container, Row, Col } from 'react-bootstrap';
+import '../assets/sass/style.scss';
 
 const HomePage = () => {
 
