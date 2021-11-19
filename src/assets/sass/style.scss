@@ -1,11 +1,10 @@
-$black: #000;
-$white: #fff;
-body{
-    background: $black;
-}
+@import './_reset';
+@import './_variable';
+@import './_base';
+
 h1{
-    background: $black;
-    color: $white;
+    color: $colorBase;
     text-align: center;
     padding: 10px 0;
+    display: flex;
 }

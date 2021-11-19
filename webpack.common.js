@@ -34,24 +34,23 @@ module.exports = {
       {
         test: /\.(scss|css)$/,
         use: [
-          process.env.NODE_ENV !== 'production'
-            ? 'style-loader'
-            : MiniCssExtractPlugin.loader,
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true
-            }
-          }
+          process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader, 
+          { loader: 'css-loader', options: { sourceMap: true, import: true, } },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true }}
         ]
       }
     ]
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      Styles: path.resolve(__dirname, 'src/assets/sass/'),
+    }
+
   },
   plugins: [
+    require('autoprefixer'),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
