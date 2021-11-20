@@ -45,9 +45,11 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
-      Styles: path.resolve(__dirname, 'src/assets/sass/'),
+      assets: path.resolve(__dirname, 'src/assets/'),
+      styles: path.resolve(__dirname, 'src/assets/sass/'),
+      components: path.resolve(__dirname, 'src/components/'),
+      utils: path.resolve(__dirname, 'src/utils/'),
     }
-
   },
   plugins: [
     require('autoprefixer'),

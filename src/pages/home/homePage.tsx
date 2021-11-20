@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import Request from '../utils/request';
-import Header from '../components/header/header';
-import Footer from '../components/footer/footer';
+import Request from 'utils/request';
+import Header from 'components/header/header';
+import Footer from 'components/footer/footer';
 import { Translation } from 'react-i18next';
 import { Container, Row, Col } from 'react-bootstrap';
-import 'Styles/style.scss';
+import './_home.scss';
 
 const HomePage = () => {
 

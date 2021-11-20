@@ -1,4 +1,4 @@
-import Home from "./pages/homePage";
+import Home from "./pages/home/homePage";
 import Contact from "./pages/contactPage";
 
 const routes = [

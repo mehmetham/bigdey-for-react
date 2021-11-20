@@ -1,0 +1,91 @@
+
+@import 'styles/_variable';
+
+.announcement{
+  background: $colorBase;
+  color: $colorWhite;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-background{
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 550px;
+  background-image: linear-gradient(
+180deg
+, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%), url(https://assets.bigdey.com/images/home/02.jpg);
+}
+.header{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  .pre-header{
+    padding: 35px 170px 20px 170px;
+    &-top{
+      align-items: center;
+    }
+    &-account{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .search-holder{
+        ul{
+          li{
+            margin-right: 25px;
+            display: inline-block;
+            vertical-align: middle;
+            &:last-child{
+              margin-right: 15px;
+            }
+            a{
+              color: $colorWhite;
+              font-size: 20px;
+              display: block;
+              i{
+                display: block;
+                &.scape-basic-Shopping-Cart{
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .account-navigation{
+        ul{
+          display: flex;
+          li{
+            margin-left: 13px;
+          }
+        }
+      }
+    }
+    &-navigation{
+      .nav{
+        padding: 24px 0 0 0;
+        ul{
+          display: flex;
+          li{
+            padding: 0 25px 0 0;
+            a{
+              color: $colorWhite;
+              white-space: nowrap;
+              display: block;
+              position: relative;
+              border-bottom: 2px solid transparent;
+              font-size: 14.5px;
+              font-weight: 500;
+              &:hover{
+                border-color: $colorBase;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

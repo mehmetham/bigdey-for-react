@@ -7,9 +7,7 @@ import configureStore from './store/store';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import { CookiesProvider } from 'react-cookie';
-
-// Importing the Bootstrap CSS
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'styles/style.scss';
 
 const store = configureStore();
 
