@@ -25,6 +25,37 @@
   width: 100%;
   .pre-header{
     padding: 35px 170px 20px 170px;
+    &.sticky{
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: $colorWhite;
+      padding: 12px 25px 15px 25px;
+      .pre-header-account{
+        .search-holder{
+          a{
+            color: $colorDarkGrey;
+          }
+        }
+      }
+      .pre-header-navigation{
+        display: flex;
+        align-items: center;
+        .nav{
+          padding: 5px 0 0 35px;
+          a{
+            color: $colorDarkGrey;
+            border-bottom: 2px solid transparent;
+            font-size: 15px;
+            font-weight: 500;
+            &:hover{
+              color: $colorBase;
+            }
+          }
+        }
+      }
+    }
     &-top{
       align-items: center;
     }

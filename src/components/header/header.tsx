@@ -1,36 +1,54 @@
-import React from 'react';
-import Logo from './logo';
-import Navigation from './navigation';
-import AccountNavigation from './accountNavigation';
+import React, { useLayoutEffect, useState, useRef } from 'react';
+import HeaderDefault from './header-default';
+import HeaderSticky from './header-sticky';
 import Announcement from './announcement';
-import {Row, Col} from 'react-bootstrap';
 import './_header.scss';
 
+
 const Header = () => {
+  const ref = useRef(null);
+  const sticky = useStickyHeader(200);
+  const headerClasses = `pre-header ${sticky ? 'sticky' : ''}`;
+  
+  const getSelectionHeader = () => {
+    if(sticky){
+      return (<HeaderSticky />)
+    }else{
+      return (<HeaderDefault />)
+    }
+  };
     return(
       <>
         <div className="header-background">
           <div id="header" className="header">
               <Announcement />
-              <div className="pre-header">
-                <Row className="pre-header-top">
-                  <Col className="pre-header-logo" xs={5}>
-                    <Logo />
-                  </Col>
-                  <Col className="pre-header-account" xs={7}>
-                    <AccountNavigation />
-                  </Col>
-                </Row>
-                <Row className="pre-header-navigation">
-                  <Col md={12}>
-                    <Navigation />
-                  </Col>
-                </Row>
+              <div ref={ref} className={headerClasses}>
+                { getSelectionHeader() }
               </div>
             </div> 
         </div>
       </>
     )
 }
+
+
+function useStickyHeader(offset = 0) {
+  const [stick, setStick] = useState(false);
+  
+  const handleScroll = () => {
+    setStick( window.scrollY > offset );
+  };
+  
+  useLayoutEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    
+    return(() => {
+      window.removeEventListener('scroll', handleScroll);
+    });
+  });
+  
+  return stick;
+}
+
 
 export default Header

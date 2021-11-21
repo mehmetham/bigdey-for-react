@@ -1,0 +1,58 @@
+@import 'styles/_variable';
+.footer{
+  background: $colorDark;
+  padding-bottom: 40px;
+  &-navigation{
+    padding: 70px 0 20px 0;
+    ul{
+      text-align: center;
+      li{
+        padding: 0 15px 10px;
+        display: inline-block;
+        a{
+          letter-spacing: 0px;
+          color: $colorWhite;
+          border-bottom: 1px solid transparent;
+          font-size: 95%;
+          &:hover{
+            border-bottom-color: $colorWhite;
+          }
+        }
+      }
+    }
+  }
+  &-socials{
+    padding-bottom: 20px;
+    ul{
+      text-align: center;
+      li{
+        display: inline-block;
+        padding: 0 5px 15px;
+        a{
+          color: $colorWhite;
+          font-size: 16px;
+          width: 35px;
+          height: 35px;
+          display: block;
+          text-align: center;
+          line-height: 35px;
+          border: 1px solid rgba(255,255,255,0.5);
+          border-radius: 50%;
+          &:hover{
+            color: $colorBase;
+            border-color: $colorBase;
+          }
+        }
+      }
+    }
+  }
+  &-copyright{
+    font-size: 14px;
+    text-align: center;
+    color: $colorWhite;
+    a{
+      color: $colorWhite;
+    
+    }
+  }
+}

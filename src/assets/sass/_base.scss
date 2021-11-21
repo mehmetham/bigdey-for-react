@@ -230,6 +230,24 @@ h5.title:not(:last-child){
   font-weight: 300;
 }
 
-.container{
-  max-width: 1280px;
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+
+@media only screen and (min-width: 1680px){
+
+	.container.wide-style{
+		max-width: 1390px; 
+	}
+
+	.container.wide{
+		max-width: 1480px;
+	}
+
+	.container.wide2{
+		max-width: 1600px;
+	}
+
+	.container.wide3{
+		max-width: 1280px;
+	}
+
 }
