@@ -36,6 +36,9 @@
         .search-holder{
           a{
             color: $colorDarkGrey;
+            &.language-icons{
+              display: none;
+            }
           }
         }
       }

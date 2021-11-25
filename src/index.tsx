@@ -7,6 +7,8 @@ import configureStore from './store/store';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import { CookiesProvider } from 'react-cookie';
+// Importing the Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'styles/style.scss';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
